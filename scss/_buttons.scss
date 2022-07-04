@@ -1,0 +1,86 @@
+//become a member
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    border: 1px solid rgb(242, 191, 6);
+    transition: all 0.2s;
+    position: relative;
+    font-family: $secondary-font;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-color {
+    background-color: $color-blue;
+    color: goldenrod;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px $color-blue;
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-animation {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+//more info
+
+.btn-text {
+  &:link,
+  &:visited {
+    background-color: $color-white;
+    color: $color-red;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-red;
+    padding: 0.3rem;
+    font-size: $default-font-size;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+}

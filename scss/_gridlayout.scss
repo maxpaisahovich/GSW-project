@@ -1,0 +1,54 @@
+.u-center-text {
+  text-align: center;
+  margin-top: -8rem;
+}
+.u-center-second {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.u-margin-bottom-big {
+  padding: 8rem;
+}
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+.u-margin-top-big {
+  margin-top: 13rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 10rem;
+}
+.u-margin-top-small {
+  margin-top: -15rem;
+}
+
+.intro-row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  margin-top: 8rem;
+}
+.features-row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.card-row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-left: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 6rem;
+  gap: 1rem;
+}
