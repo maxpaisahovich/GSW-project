@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,13 +21,37 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="scss/index.css" />
     <link rel="shortcut icon" type="image/png" href="img/title-logo.png" />
 
     <title>GSW | Fan's web site for gold blooded people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox id nvi-toggle" />
+      <label for="navi-toggle" class="navigation__button">menu</label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation">
+            <a href="#" class="navigation__link">About our Organization</a>
+          </li>
+          <li class="navigation">
+            <a href="#" class="navigation__link">features</a>
+          </li>
+          <li class="navigation">
+            <a href="#" class="navigation__link">team games</a>
+          </li>
+          <li class="navigation">
+            <a href="#" class="navigation__link">tournaments</a>
+          </li>
+          <li class="navigation">
+            <a href="#" class="navigation__link">sign up</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logo-box">
         <img
@@ -348,9 +377,7 @@
           </div>
         </div>
         <div class="u-center-text u-margin-top-big">
-          <a href="#" class="btn btn-color btn-animation"
-            >discover all the games</a
-          >
+          <a href="#" class="btn btn-color">discover all the games &rarr;</a>
         </div>
       </section>
       <section class="section-streetball">
@@ -414,7 +441,9 @@
               </figcaption>
             </figure>
             <div class="tournament-1__text">
-              <h3 class="heading-tertiary">2k gaming leauge</h3>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                2k gaming leauge
+              </h3>
 
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
@@ -467,11 +496,125 @@
                   />
                   <label for="email" class="form__label">Email Address</label>
                 </div>
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="streetball"
+                      name="league"
+                    />
+                    <label for="streetball" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      streetball league</label
+                    >
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="2k-league"
+                      name="league"
+                    />
+                    <label for="2k-league" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      2k gaming league</label
+                    >
+                  </div>
+                </div>
+                <div class="form-group u-margin-top-small-1">
+                  <button type="submit" class="btn btn-color">
+                    Next step &rarr;
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          src="img/golden-state-warriors-logo-968289.png"
+          alt="full logo"
+          class="footer__logo"
+        />
+      </div>
+      <div class="row-footer">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Organizetion</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">support</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__header">
+            <h2>Follow us on:</h2>
+          </div>
+          <div class="footer__icon-row">
+            <a href="#"
+              ><img
+                src="img/icons/facebook-1.png"
+                alt="facebook"
+                class="footer__icon-img"
+              />
+            </a>
+            <a href="#"
+              ><img
+                src="img/icons/instagram-1.png"
+                alt="instagram"
+                class="footer__icon-img"
+              />
+            </a>
+            <a href="#"
+              ><img
+                src="img/icons/twitter-2.png"
+                alt="twitter"
+                class="footer__icon-img"
+              />
+            </a>
+            <a href="#"
+              ><img
+                src="img/icons/youtube.png"
+                alt="wyoutube"
+                class="footer__icon-img"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="col-2-of-2">
+          <p class="footer__copyright">
+            Built by <a href="#" class="footer__link">Max feldman</a> for an
+            exercise purpose Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quos cum et dicta alias quasi quam rem debitis enim
+            accusantium. Quo mollitia accusamus voluptates voluptas? Optio
+            dolore tenetur vero debitis beatae! Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Harum iste, quo impedit dignissimos
+            quidem quod veritatis pariatur obcaecati, tenetur vel distinctio
+            magni? Architecto nesciunt veniam similique tempore. Aspernatur,
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae, et! Qui laboriosam nesciunt odit necessitatibus. Fugit
+            magnam minima exercitationem, veritatis, quae voluptatibus eveniet
+            rerum sit adipisci, accusamus perspiciatis laudantium consectetur?
+            consequatur accusamus? . Copyright &copy; by max feldman
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

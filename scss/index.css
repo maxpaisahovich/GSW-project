@@ -1,14 +1,15 @@
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2rem;
   display: inline-block;
   border-radius: 10rem;
-  border: 1px solid rgb(242, 191, 6);
   transition: all 0.2s;
   position: relative;
   font-family: "Gloria Hallelujah", cursive;
   font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -18,7 +19,8 @@
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -81,10 +83,6 @@
   margin-top: 1rem;
 }
 
-.u-margin-bottom-big {
-  padding: 8rem;
-}
-
 .u-margin-bottom-small {
   margin-bottom: 2rem;
 }
@@ -93,16 +91,28 @@
   margin-bottom: 4rem;
 }
 
-.u-margin-top-big {
-  margin-top: 13rem;
+.u-margin-bottom-big {
+  padding: 8rem;
+}
+
+.u-margin-left-small {
+  margin-left: 4rem;
+}
+
+.u-margin-top-small-1 {
+  margin-top: 4rem;
+}
+
+.u-margin-top-small {
+  margin-top: -15rem;
 }
 
 .u-margin-top-medium {
   margin-top: 10rem;
 }
 
-.u-margin-top-small {
-  margin-top: -15rem;
+.u-margin-top-big {
+  margin-top: 13rem;
 }
 
 .intro-row {
@@ -131,6 +141,15 @@
   grid-template-columns: repeat(3, 1fr);
   margin-top: 6rem;
   gap: 1rem;
+}
+
+.row-footer {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10rem;
+  gap: 8rem;
+  margin-top: -8rem;
 }
 
 .heading-primary {
@@ -494,7 +513,7 @@
   font-family: "Gloria Hallelujah", cursive;
 }
 .form__group:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .form__input {
   font-size: 1.2rem;
@@ -506,6 +525,7 @@
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
+  transition: all 0.3s;
 }
 .form__input:focus {
   outline: none;
@@ -540,6 +560,111 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+  margin-top: 2rem;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-label {
+  font-size: 1.6rem;
+  font-weight: 900;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid rgb(65, 65, 198);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+}
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(65, 65, 198);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #eee;
+  padding: 10rem 0 5rem 0;
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #070707;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.footer__logo {
+  width: 15rem;
+  height: auto;
+}
+.footer__navigation {
+  border-top: 1px solid black;
+  padding-top: 2rem;
+  display: inline-block;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item {
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+.footer__link:link, .footer__link:visited {
+  color: #070707;
+  background-color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.footer__link:hover, .footer__link:active {
+  color: rgb(65, 65, 198);
+  box-shadow: 0 1rem 2rem rgba(7, 7, 7, 0.4);
+  transform: rotate(5deg) scale(1.3);
+  padding: 3px;
+}
+.footer__copyright {
+  border-top: 1px solid black;
+  padding-top: 2rem;
+  width: 80%;
+  float: right;
+}
+.footer__header {
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+.footer__icon-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem;
+  margin-top: 7rem;
+  margin-left: 12rem;
+}
+.footer__icon-img {
+  height: 5rem;
 }
 
 *,
